@@ -1,0 +1,20 @@
+[project]
+name = "fast-mpc-server"
+version = "0.1.0"
+description = "FastMCP-based weather server using http-streaming transport (example)"
+readme = "README.md"
+requires-python = ">=3.10"
+
+# Runtime dependencies used by main.py
+dependencies = [
+    "httpx>=0.23.0",
+    "mcp>=0.1.0"
+]
+
+[project.scripts]
+# Provides a simple console entrypoint: `fast-mpc-server`
+fast-mpc-server = "main:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
